@@ -18,8 +18,8 @@
 #define CONVERT_UNSIGNED 2
 
 /**
- * struct parameters - structurs of parameters
- * struct specifier - struct token
+ * struct parameters - parameters of struct
+ *
  * @unsign: flag if value is unsign
  *
  * @plus_flag: if plus flag specified
@@ -33,7 +33,7 @@
  *
  * @h_modifier: if h modifier specified
  * @l_modifier: if l modifier specified
-*/
+ */
 typedef struct parameters
 {
 	unsigned int unsign       : 1;
@@ -51,23 +51,21 @@ typedef struct parameters
 	unsigned int l_modifier   : 1;
 } params_t
 /**
- * struct specifier - struct specifier
+ * struct specifier - struct token
  *
- * @valid: the valid char
- *
- * @f: function
-*/
+ * @spcifier: format token
+ * @f:the function associated
+ */
 typedef struct specifier
 {
-	char *valid;
-	int (*f)(va_list);
+	char *specifier;
+	int (*f)(va_list, params_t *);
 } specifier_t;
 
 int _puts(char *str);
 int _putchar(int c);
 
 
-int _printf(const char *format, ...);
 
 int print_char(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
@@ -103,7 +101,7 @@ int print_number(char *str, params_t *params);
 int print_number_right_shift(char *s, params_t *params, va_list ap);
 int print_number_left_shift(char *s, params_t *params, va_list ap);
 
-
+int _printf(const char *format, ...);
 
 
 
