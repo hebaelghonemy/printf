@@ -19,8 +19,9 @@
 
 /**
  * struct parameters - structurs of parameters
- * @@unsign: flag if value is unsign
- * 
+ * struct specifier - struct token
+ * @unsign: flag if value is unsign
+ *
  * @plus_flag: if plus flag specified
  * @space_flag: if space flag specified
  * @hashtag_flag: if hashtag flag specified
@@ -48,19 +49,19 @@ typedef struct parameters
 
 	unsigned int h_modifier   : 1;
 	unsigned int l_modifier   : 1;
-}params_t
-
+} params_t
 /**
- * struct specifier - struct of token
+ * struct specifier - struct specifier
  *
- * @specifier: format of token
+ * @valid: the valid char
+ *
  * @f: function
 */
 typedef struct specifier
 {
-	char *specifier;
-	int (*f)(va_list, params_t *);
-}specifier_t;
+	char *valid;
+	int (*f)(va_list);
+} specifier_t;
 
 int _puts(char *str);
 int _putchar(int c);
@@ -72,7 +73,7 @@ int print_char(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
 int print_percent(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
-int print_S(va-list ap, params_t *params);
+int print_S(va_list ap, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 int print_hex(va_list ap, params_t *params);
@@ -93,21 +94,14 @@ int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 char *get_percision(char *p, params_t *params, va_list ap);
 
-void int_params( params_t *params, va_list ap);
+void int_params(params_t *params, va_list ap);
 
 int_isdigit(int, c);
-int-strlen(char *s);
+int_strlen(char *s);
 
 int print_number(char *str, params_t *params);
 int print_number_right_shift(char *s, params_t *params, va_list ap);
 int print_number_left_shift(char *s, params_t *params, va_list ap);
-
-
-
-
-
-
-
 
 
 
