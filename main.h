@@ -49,12 +49,13 @@ typedef struct parameters
 
 	unsigned int h_modifier   : 1;
 	unsigned int l_modifier   : 1;
-} params_t
+} params_t;
+
 /**
  * struct specifier - struct token
  *
- * @spcifier: format token
- * @f:the function associated
+ * @specifier: format token
+ * @f: the function associated
  */
 typedef struct specifier
 {
@@ -78,14 +79,14 @@ int print_hex(va_list ap, params_t *params);
 int print_HEX(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 int print_rev(va_list ap, params_t *params);
-int print_ rot13(va_list ap, params_t *params);
+int print_rot13(va_list ap, params_t *params);
 
-char *convert(long int num, int base, int flags, params);
+char *convert(long int num, int base, int flags, params_t);
 
 int print_from_to(char *start, char *stop, char *except);
 
 int(*get_specifier(char *s))(va_list ap, params_t *params);
-int get print func(char *s, va_list ap, params_t *params);
+int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 
@@ -94,8 +95,8 @@ char *get_percision(char *p, params_t *params, va_list ap);
 
 void int_params(params_t *params, va_list ap);
 
-int_isdigit(int, c);
-int_strlen(char *s);
+int _isdigit(int c);
+int _strlen(char *s);
 
 int print_number(char *str, params_t *params);
 int print_number_right_shift(char *s, params_t *params, va_list ap);
