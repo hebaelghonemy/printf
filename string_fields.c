@@ -13,15 +13,15 @@ int d = 0;
 if (*p != '.')
 return (p);
 p++;
-if (*P == '*')
+if (*p == '*')
 {
 d = va_arg(ap, int);
 p++;
 }
 else
 {
-while (_isdigit(*P))
-d = d * 10 + (*P++ - '0');
+while (_isdigit(*p))
+d = d * 10 + (*p++ - '0');
 }
 params->percision = d;
 return (p);
