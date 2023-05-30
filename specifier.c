@@ -19,7 +19,7 @@ specifier_t specifiers[] = {
 {"x", print_hex},
 {"X", print_HEX},
 {"p", print_address},
-{"s", print_S},
+{"S", print_S},
 {"r", print_rev},
 {"R", print_rot13},
 {NULL, NULL}
