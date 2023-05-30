@@ -82,6 +82,7 @@ int print_rev(va_list ap, params_t *params);
 int print_rot13(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
 
+
 char *convert(long int num, int base, int flags, params_t);
 
 int print_from_to(char *start, char *stop, char *except);
@@ -104,7 +105,6 @@ int print_number_right_shift(char *s, params_t *params, va_list ap);
 int print_number_left_shift(char *s, params_t *params, va_list ap);
 
 int _printf(const char *format, ...);
-
 
 
 #endif
