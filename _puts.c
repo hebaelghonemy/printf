@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-int_puts(char *str)
+int _puts(char *str)
 {
 char *a = str;
 while (*str)
