@@ -93,7 +93,7 @@ int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 char *get_percision(char *p, params_t *params, va_list ap);
 
-void int_params(params_t *params, va_list ap);
+void init_params(params_t *params, va_list ap);
 
 int _isdigit(int c);
 int _strlen(char *s);
