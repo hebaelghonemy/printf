@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * get_percision - gets the percision from the format string
  * @p: the format string
