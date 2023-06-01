@@ -83,7 +83,7 @@ int print_rot13(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
 
 
-char *convert(long int num, int base, int flags, params_t);
+char *convert(long int num, int base, int flags, params_t *params);
 
 int print_from_to(char *start, char *stop, char *except);
 
